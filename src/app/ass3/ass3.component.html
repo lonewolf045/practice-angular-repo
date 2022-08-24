@@ -1,0 +1,12 @@
+<button
+    class="btn btn-primary"
+    (click)="onToggle()">
+    Display Details
+</button>
+<p *ngIf="showDetails">Secret Password = mackerel</p>
+<p 
+    *ngFor="let click of clicks; let logNum = index"
+    [ngStyle]="{backgroundColor: logNum >= 4 ? 'blue' : 'transparent'}"
+    [ngClass]="{white: logNum >= 4}">
+    {{click.message}}
+</p>
